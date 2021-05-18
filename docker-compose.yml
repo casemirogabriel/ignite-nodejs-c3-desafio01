@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  database:
+    image: postgres
+    container_name: challenge_c3_01
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=docker
+      - POSTGRES_DB=queries_challenge
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
